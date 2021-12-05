@@ -5,5 +5,5 @@ age,gender,chest_pain,resting_blood_pressure,cholesterol,fasting_blood_sugar_gre
 58,male,non-angina pain,112,230,false,probable or definite left ventricular hypertrophy,165,no,2.5,flat,1,reversible defect
 44,male,non-angina pain,140,235,false,probable or definite left ventricular hypertrophy,180,no,0,upsloping,0,normal
 47,male,non-angina pain,138,257,false,probable or definite left ventricular hypertrophy,156,no,0,upsloping,0,normal
-73,female,non-angina pain,128,216,false,probable or definite left ventricular hypertrophy,115,no,0,upsloping,0,-,
+73,female,non-angina pain,128,216,false,probable or definite left ventricular hypertrophy,115,no,0,upsloping,0,
 99,female,asymptomatic,138,234,false,probable or definite left ventricular hypertrophy,160,no,0,upsloping,0,normal

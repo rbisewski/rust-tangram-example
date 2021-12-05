@@ -91,9 +91,13 @@ pub fn convert_to_records(filename: String) -> Vec<HeartDisease> {
         let mut clean_line = String::from("");
 
         for element in current_line_elements {
+            let fixed_element = match element {
+                "" => "\"\"".to_string(),
+                _ => element.trim().to_string(),
+            };
             clean_line = [
                 clean_line,
-                element.trim().to_string(),
+                fixed_element,
                 ",".to_string(),
             ].concat();
         }
