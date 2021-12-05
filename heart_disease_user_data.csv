@@ -1,0 +1,9 @@
+age,gender,chest_pain,resting_blood_pressure,cholesterol,fasting_blood_sugar_greater_than_120,resting_ecg_result,exercise_max_heart_rate,exercise_induced_angina,exercise_st_depression,exercise_st_slope,fluoroscopy_vessels_colored,thallium_stress_test
+43,male,typical angina,145,233,true,probable or definite left ventricular hypertrophy,150,no,2.3,downsloping,0,fixed defect
+59,male,non-angina pain,150,212,true,normal,157,no,1.6,upsloping,0,normal
+41,female,asymptomatic,130,330,false,probable or definite left ventricular hypertrophy,169,no,0,upsloping,0,normal
+58,male,non-angina pain,112,230,false,probable or definite left ventricular hypertrophy,165,no,2.5,flat,1,reversible defect
+44,male,non-angina pain,140,235,false,probable or definite left ventricular hypertrophy,180,no,0,upsloping,0,normal
+47,male,non-angina pain,138,257,false,probable or definite left ventricular hypertrophy,156,no,0,upsloping,0,normal
+73,female,non-angina pain,128,216,false,probable or definite left ventricular hypertrophy,115,no,0,upsloping,0,
+99,female,asymptomatic,138,234,false,probable or definite left ventricular hypertrophy,160,no,0,upsloping,0,normal
