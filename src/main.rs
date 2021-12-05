@@ -1,29 +1,32 @@
-use std::env;
+#[macro_use]
+extern crate clap;
+
+use std::path::Path;
 
 mod heartdisease;
-use heartdisease::{convert_to_records, predict};
-use tangram::{BinaryClassificationPredictOutput};
+use heartdisease::{convert_to_records, predict, HeartDiseaseWithDiagnosis, set_diagnosis};
 
-use crate::heartdisease::{HeartDiseaseWithDiagnosis, set_diagnosis};
+use tangram::BinaryClassificationPredictOutput;
 
 fn main() {
+    let arguments = clap_app!(Rust_Tangram_Example =>
+        (version: "1.0.0")
+        (author: "Robert Bisewski <contact@ibiscybernetics.com>")
+        (about: "Uses tangram trained models to make diagnosis predictions")
+        (@arg INPUT: -i --input +required +takes_value "Sets the input file to use")
+    ).get_matches();
 
-    let args: Vec<String> = env::args().collect();
-    let flag: &String;
-    let filename: &String;
-
-    match args.len() {
-        3 => {
-            flag = &args[1];
-            filename = &args[2];
-        },
+    // parse the --input value
+    let filename = match arguments.value_of("INPUT") {
+        Some(v) => v,
         _ => {
-            println!("Usage: ./rust-tangram-example --input /path/to/new_data.csv");
-            return;
+            panic!("Empty or invalid file.");
         }
-    }
+    };
 
-    if flag.is_empty() || filename.is_empty() || flag != "--input" {
+    // safety check, ensure the file actually exists
+    if !Path::new(filename).exists() {
+        println!("No such file exists: {}", filename);
         return;
     }
 

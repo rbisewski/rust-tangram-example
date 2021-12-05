@@ -40,6 +40,7 @@ pub struct HeartDiseaseWithDiagnosis {
     diagnosis_probability: f32,
 }
 
+#[allow(clippy::too_many_arguments)]
 pub fn new(
     age: f32,
     gender: String,
