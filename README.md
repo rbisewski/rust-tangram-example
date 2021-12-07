@@ -7,13 +7,13 @@ This repo exists to detail how to use the tangram CLI tool alongside Rust to fir
 First, install tangram:
 
 ```bash
-yay -S tangram
+yay -S tangram-bin
 ```
 
 Second, take CSV datafile and train on this data using tangram:
 
 ```bash
-tangram train --file heart_disease.csv --target diagnosis
+tangram train --file heart_disease_training_data.csv --target diagnosis
 ```
 
 ### Predict
